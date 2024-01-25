@@ -345,6 +345,66 @@ ul {
     font-size: 1.3em;
 }
 
+/* ========== Contact Form ========== */
+
+form{
+    width: 45%;
+    float: left;
+    padding: 30px 0;
+    margin-bottom:80px;
+}
+
+textarea{
+    outline: none;
+    border: 2px solid #9db1b1;
+    border-radius: 4px;
+}
+
+input[type=text], input[type=email], input[type=tel], textarea{
+    padding: 5px;
+    margin: 6px 0 20px 0;
+    border: 2px solid #9db1b1;
+    border-radius: 4px;
+}
+
+/*Reference: https://www.w3schools.com/css/css_form.asp*/
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, textarea:focus, select:focus{
+    background-color: lightgoldenrodyellow;
+    border: 2px solid #555;
+}
+
+select{
+    border: 2px solid #9db1b1;
+    height:auto;
+    padding: 10px 20px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+select:invalid, select option[value=""] {
+  color: #999999;
+}
+  
+input[type=submit]{
+    background-color: var(--secondary);
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    display: block;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    transition: 1500ms;
+    background-color: var(--accent);
+}
+
+.address{
+    width: 45%;
+    float:right;
+    padding: 30px 0;
+}
 
 /* ========== Footer ========== */
 footer {
