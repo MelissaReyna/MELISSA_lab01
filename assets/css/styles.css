@@ -27,8 +27,21 @@ body {
 }
 
 h1,
+h2,
+h3,
+h4,
+h5,
 a {
     color: var(--primary);
+}
+
+h2 {
+    font-size: 1.7em;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 1.8em;
 }
 
 a {
@@ -54,7 +67,8 @@ p {
     margin: 0 auto;
 }
 
-section {
+section,
+footer {
     padding: 2em 2.5em;
 }
 
@@ -148,6 +162,19 @@ ul {
     text-align: center;
 }
 
+.dot::before,
+.pagination a::before {
+    content: '';
+    background: var(--accent);
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: inherit;
+}
+
 .link-active {
     color: var(--accent);
     border-bottom: 2px var(--accent) solid;
@@ -163,6 +190,7 @@ ul {
 
 
 /* ========== Social Media Sidebar ========== */
+.pagination, 
 .social-media {
     position: fixed;
     top: 50%;
@@ -174,6 +202,38 @@ ul {
     justify-content: center;
     align-items: center;
     z-index: 9;
+}
+
+.pagination {
+    left: 0;
+    border-right: 1px var(--secondary) solid;
+}
+
+.pagination a {
+    display: block;
+    position: relative;
+    height: 1.3em;
+    width: 1.3em;
+    border-radius: 50%;
+    margin: 2em 0;
+}
+
+.pagination a::before {
+    width: 0.5em;
+    height: 0.5em;
+    background: var(--primary);
+}
+
+.pagination a:hover::before {
+    background: var(--accent);
+}
+
+.pagination .active {
+    border: 1px var(--primary) solid;
+}
+
+.pagination .active::before {
+    background: var(--accent);
 }
 
 
@@ -189,6 +249,9 @@ ul {
 
 
 /* ========== About Section ========== */
+.about {
+    background: linear-gradient(135deg, #252628, #17181a);
+}
 
 .about .container {
     display: flex;
@@ -203,4 +266,225 @@ ul {
     border-radius: 0.9em;
 }
 
+/* ========== Pet Peeve Section ========== */
+.pet-peeve .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5em;
+}
+
+.pet-peeve img {
+    width: 50%;
+    filter: drop-shadow(0 0 1.5em rgba(0, 0, 0, .5));
+    border-radius: 0.9em;
+}
+
+
+/* ========== Fun Facts Section ========== */
+#fun-facts {
+    background: linear-gradient(135deg, #303134, #1f2123);
+}
+
+.fun-facts h2 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.fun-facts .info>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.fun-facts img {
+    width: 8em;
+    justify-self: right;
+    margin-right: 6em;
+    padding: 4em 0;
+}
+
+.info-text {
+    padding-left: 6em;
+    border-left: 1px var(--accent) solid;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+}
+
+.info-text::before,
+.info-text::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.info-text::before {
+    background: var(--accent);
+    width: 0.8em;
+    height: 0.8em;
+    left: -0.43em;
+}
+
+.info-text::after {
+    border: 1px var(--primary) solid;
+    width: 1.8em;
+    height: 1.8em;
+    left: -0.97em;
+}
+
+.fun-facts .btn {
+    text-align: center;
+}
+
+.contact {
+    text-transform: uppercase;
+    font-size: 1.3em;
+}
+
+
+/* ========== Footer ========== */
+footer {
+    text-align: center;
+}
+
+.footer-menu {
+    margin-bottom: 2em;
+}
+
+.footer-menu li {
+    margin: 1em 0;
+    font-size: 1.2em;
+}
+
+.footer-social li {
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+.footer-social li a {
+    color: var(--accent);
+    font-size: 1.4em;
+}
+
+.footer-social li a:hover {
+    color: var(--primary);
+}
+
+@keyframes expand {
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .header-images {
+        margin-top: 5em;
+        justify-content: center;
+    }
+
+    .header-images img {
+        width: 30vw;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .title {
+        font-size: 4.5em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .social-media {
+        display: none;
+    }
+
+    .pagination {
+        background: #111;
+        top: unset;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border: none;
+        border-top: 1px var(--secondary) solid;
+        height: 0;
+        width: 100%;
+    }
+
+    .pagination ul {
+        display: flex;
+        gap: 2em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .menu {
+        background: #17181a;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        padding: 0 1.5em;
+        margin-top: 5.5em;
+        z-index: 3;
+        overflow: hidden;
+        transition: 0.4s;
+    }
+
+    /* Toggle class used later in JavaScript  */
+    .navbar .menu-open {
+        height: 13.5em;
+    }
+
+    .menu li {
+        display: block;
+        margin: 1.5em 0;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .about .container {
+        flex-direction: column;
+    }
+
+    .fun-facts .info>div {
+        grid-template-columns: 1fr;
+    }
+
+    .fun-facts .info-text {
+        border: none;
+        padding: 0;
+    }
+
+    .fun-facts img {
+        margin: 0;
+        justify-self: center;
+    }
+
+    .info-text::before,
+    .info-text::after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 14px;
+    }
+}
 
