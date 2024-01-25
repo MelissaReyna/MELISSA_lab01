@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+/* ========== Font-Family ========== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+/* ========== General-Styling ========== */
+:root {
+    --primary: #ffffff;
+    --secondary: #afafb0;
+    --accent: #e2c78c;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+a {
+    color: var(--primary);
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+p {
+    color: var(--secondary);
+    line-height: 25px;
+    max-width: 30em;
+    margin: 1.5em 0;
+    font-size: 0.9em;
+}
+
+.container {
+    width: 80vw;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 2em 2.5em;
+}
+
+.pb-2 {
+    padding-bottom: 2em;
+}
+
+.pb-10 {
+    padding-bottom: 10em;
+}
+
+.fs-2 {
+    font-size: 2.5em;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.fw-0 {
+    font-weight: 0;
+}
+
+
+/* ========== Header ========== */
+header {
+    padding: 1.5em 1.5em 2.5em 1.5em;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 1.5em;
+    font-size: 1.0em;
+}
+
+.menu-btn {
+    color: var(--primary);
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.3s;
+    display: none;
+}
+
+.menu-btn:hover {
+    color: var(--accent);
+}
+
+.header-content {
+    display: flex;
+    gap: 2em;
+    max-width: 32em;
+}
+
+.title {
+    font-size: 3em;
+    line-height: 1.3em;
+}
+
+.sub-heading {
+    color: var(--primary);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8em 2em;
+    border: 1px var(--accent) solid;
+    border-radius: 5em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    min-width: 10em;
+    text-align: center;
+}
+
+.link-active {
+    color: var(--accent);
+    border-bottom: 2px var(--accent) solid;
+}
+
+.header-text2 {
+    padding: 5em 0em;
+}
+
+.header-text3 {
+    padding: 4em 0em 1em 0em;
+}
+
+
+/* ========== Social Media Sidebar ========== */
+.social-media {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4em;
+    height: 70%;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
+
+
+.social-media {
+    right: 0;
+    border-left: 1px var(--secondary) solid;
+}
+
+.social-media li {
+    font-size: 1.1em;
+    margin: 2em 0;
+}
+
+
+/* ========== About Section ========== */
+
+.about .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5em;
+}
+
+.about img {
+    width: 50%;
+    filter: drop-shadow(0 0 1.5em rgba(0, 0, 0, .5));
+    border-radius: 0.9em;
+}
+
+
