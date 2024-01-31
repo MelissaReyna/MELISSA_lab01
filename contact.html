@@ -100,24 +100,26 @@
                 <p>Thank you for your interest in getting in touch! Please feel free to use any of the methods below to contact me.</p>
      
                 <!--Added contact form: https://www.w3schools.com/howto/howto_css_contact_form.asp-->
-                <form action="mailto:melissahaydee21@gmail.com">
-                  <p>
-                    <label for="name">Name*</label><br>
-                    <input name="name" id="name" type="text" placeholder="Enter your name" required>
-                  </p>
-                  <p>
-                    <label for="email">Email*</label><br>
-                    <input name="email" id="email" type="email" placeholder="Enter your email" required>
-                  </p>
-                  <p>  
-                    <label for="tel">Telephone</label><br>
-                    <input name="tel" id="tel" type="tel" placeholder="Enter your telephone">
-                  </p>
-                  <p>  
-                    <label for="message">Message*</label><br>
-                    <textarea name="message" id="message" placeholder="Enter your message" cols="30" rows="10" required></textarea>
-                  </p>
-                    <input type="submit">
+                <form id="contactForm">
+                    <p>
+                      <label for="name">Name*</label><br>
+                      <input name="name" id="name" type="text" placeholder="Enter your name" required>
+                    </p>
+                    <p>
+                      <label for="email">Email*</label><br>
+                      <input name="email" id="email" type="email" placeholder="Enter your email" required>
+                    </p>
+                    <p>  
+                      <label for="tel">Telephone</label><br>
+                      <input name="tel" id="tel" type="tel" placeholder="Enter your telephone">
+                    </p>
+                    <p>  
+                      <label for="message">Message*</label><br>
+                      <textarea name="message" id="message" placeholder="Enter your message" cols="30" rows="10" required></textarea>
+                    </p>
+                    <p>
+                      <input type="submit" value="Submit" onclick="validateForm()">
+                    </p>
                 </form>
             </div>
         </div>
