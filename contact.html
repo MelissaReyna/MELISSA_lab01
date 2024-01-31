@@ -45,9 +45,9 @@
                 </a>
                 <ul class="menu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="link-active">About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="link-active">Contact</a></li>
                 </ul>
                 <div class="menu-btn">
                     <i class="fa-solid fa-bars-staggered"></i>
@@ -56,25 +56,15 @@
 
             <div class="header-content">
                 <div class="header-text2">
-                    <h3 class="fs-2">ABOUT ME</h3>
+                    <h3 class="fs-2">CONTACT</h3>
                     <p class="sub-heading m-0 fw-0">
-                        Home > About me
+                        Home > Contact
                     </p>
                 </div>
             </div>
         </div>
     </header>
     <!-- End Header Section -->
-
-    <!-- Start Pagination Section -->
-    <section class="pagination">
-        <ul>
-            <li><a href="#header" class="active"></a></li>
-            <li><a href="#about"></a></li>
-            <li><a href="#pet-peeve"></a></li>
-        </ul>
-    </section>
-    <!-- End Pagination Section -->
 
     <!-- Start Social-Media Section -->
     <section class="social-media">
@@ -103,76 +93,36 @@
     </section>
     <!-- End Social-Media Section -->
 
-    <!-- Start About Section -->
+    <!-- Start Contact Section -->
     <section class="about main-section" id="about">
         <div class="container">
-            <img src="assets/img/img_01.jpg" alt="">
             <div>
-                <h2>About me</h2>
-                <p class="pb-2">
-                    Hi! I'm Melissa from Mexico and I'm seeking for new opportunities and challenges that will expand my skill of knowledge. Interested and fascinated in the design of efficient interfaces and systems to make the user experience more friendly and intuitive.
-                </p>
-                <a href="#pet-peeve" class="btn">See more</a>
+                <p>Thank you for your interest in getting in touch! Please feel free to use any of the methods below to contact me.</p>
+     
+                <!--Added contact form: https://www.w3schools.com/howto/howto_css_contact_form.asp-->
+                <form action="mailto:melissahaydee21@gmail.com">
+                  <p>
+                    <label for="name">Name*</label><br>
+                    <input name="name" id="name" type="text" placeholder="Enter your name" required>
+                  </p>
+                  <p>
+                    <label for="email">Email*</label><br>
+                    <input name="email" id="email" type="email" placeholder="Enter your email" required>
+                  </p>
+                  <p>  
+                    <label for="tel">Telephone</label><br>
+                    <input name="tel" id="tel" type="tel" placeholder="Enter your telephone">
+                  </p>
+                  <p>  
+                    <label for="message">Message*</label><br>
+                    <textarea name="message" id="message" placeholder="Enter your message" cols="30" rows="10" required></textarea>
+                  </p>
+                    <input type="submit">
+                </form>
             </div>
         </div>
     </section>
-    <!-- End About Section -->
-
-    <!-- Start Design Pet-Peeve Section -->
-    <section class="pet-peeve" id="pet-peeve">
-        <div class="container">
-            <div>
-                <h2>My design pet peeve</h2>
-                <p class="pb-2">
-                    It is a nightmare for me when people do not use colours correctly or do not align elements in a document, ppt, etc. Common sense!
-                </p>
-                <a href="#fun-facts" class="btn">Fun facts</a>
-            </div>
-            <img src="assets/img/img_02.jpg" alt="">
-        </div>
-    </section>
-    <!-- End Design Pet-Peeve Section -->
-
-    <!-- Start Fun-Facts Section -->
-    <section class="fun-facts main-section" id="fun-facts">
-        <div class="container">
-            <h2>Fun Facts</h2>
-            <div class="info">
-                <div>
-                    <img src="assets/img/icons/programming.png" alt="This is an icon of programming">
-                    <div class="info-text">
-                        <h3>Software Engineering</h3>
-                        <p>
-                            Recently, I graduated from a Software Engineering Degree.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="info">
-                <div>
-                    <img src="assets/img/icons/people.png" alt="This is an icon of people">
-                    <div class="info-text">
-                        <h3>Meeting people</h3>
-                        <p>
-                            I like to meet people from different countries, so being here is a dream come true.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="info">
-                <div>
-                    <img src="assets/img/icons/dog.png" alt="This is an icon of a dog">
-                    <div class="info-text">
-                        <h3>Dog's lover</h3>
-                        <p>
-                            Nothing related to design but, all I can say is, I love dogs.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Fun-Facts Section -->
+    <!-- End Contact Section -->
 
     <!-- Start Footer Section -->
     <footer>
